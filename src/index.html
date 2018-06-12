@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf8">
+  <title>XKCD IPFS ĐApp</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="loading"><div class="inner">Loading comic...</div></div>
+  <div id="middleContainer" class="box" style="visibility: hidden;">
+    <div id="ctitle">Comic Title</div>
+    <ul class="comicNav">
+      <li><a class="first" href='#'>|&lt;</a></li>
+      <li><a class="prev" rel="prev" href="#" accesskey="p">&lt; Prev</a></li>
+      <li><a class="random" href="#">Random</a></li>
+      <li><a class="next" rel="next" href="#" accesskey="n">Next &gt;</a></li>
+      <li><a class="last" href='#'>&gt;|</a></li>
+    </ul>
+    <div id="comic">
+      <img id="image" src="#" title="" alt="">
+    </div>
+    <ul class="comicNav">
+      <li><a href="#">|&lt;</a></li>
+      <li><a rel="prev" href="#" accesskey="p">&lt; Prev</a></li>
+      <li><a href="#">Random</a></li>
+      <li><a rel="next" href="#" accesskey="n">Next &gt;</a></li>
+      <li><a href="#">&gt;|</a></li>
+    </ul>
+    <br> Permanent link to original comic: https://xkcd.com/<span id='permalink'></span>/
+    <br> Image URL (for hotlinking/embedding): https://ipfs.io<span id='hotlink'></span>
+    <div id="transcript" style="display: none"></div>
+  </div>
+  <div class="footer">
+    Another
+    <a href="https://ipfs.io">IPFS</a> ĐApp by the fine folks at
+    <a href="https://textile.io"><img class="logo" src="images/textile-logo.png" /></a>
+    with help from <a href="https://ipfs.io/ipfs/QmWEAXcqwq5zY2u8Z1mii5m3MXricctd7efFep7sSEWZQz/about.html">XKCD</a>,
+    thanks to <a href="https://ipfs.io/ipfs/QmWEAXcqwq5zY2u8Z1mii5m3MXricctd7efFep7sSEWZQz/license.html">open access</a>.
+  </div>
+  <script type="text/javascript" src="bundle.js"></script>
+</body>
+
+</html>
