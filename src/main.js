@@ -2,7 +2,7 @@ import 'babel-polyfill'
 import getIpfs from 'window.ipfs-fallback'
 
 var ipfs
-const xkcdRoot = '/ipfs/QmWEAXcqwq5zY2u8Z1mii5m3MXricctd7efFep7sSEWZQz'
+const xkcdRoot = '/ipfs/QmS74HhZt3ZekqUDqdttSgMsHwYQ6miDLwGUHy6pp4qLyD'
 
 const fetchAndReplaceComic = async comicNumber => {
   try {
@@ -44,9 +44,8 @@ const setup = async () => {
     // Create new ipfs peer instance (or use browser-based peer)
     ipfs = await getIpfs()
     // Connect to public peer pinning xkcd comics (normally not needed)
-    await ipfs.swarm.connect(
-      '/ip4/54.201.10.69/tcp/4002/ws/ipfs/QmQqBfDcAre7CaTMmMzHqnrHPxX3xVT5D5GaiHh4zppTL7'
-    )
+    const addr = '/dns4/ipfs.carsonfarmer.com/tcp/4002/wss/ipfs/Qmf6Wp6McAKm5oRYUPndLaAs5tnADASyJJZ3HkhzPmJJvY'
+    await ipfs.swarm.connect(addr)
     // Add button event listeners
     for (let element of document.getElementsByClassName('first')) {
       element.addEventListener('click', (event) => {
